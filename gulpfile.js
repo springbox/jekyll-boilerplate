@@ -33,12 +33,12 @@ gulp.task('sass', function () {
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
     .pipe(gulp.dest('_site/css'))
     .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest('site_source/css'));
+    .pipe(gulp.dest('src/css'));
 });
 
 gulp.task('watch', function () {
   gulp.watch('_scss/**/*.scss', ['sass']);
-  gulp.watch(['site_source/**/*.*'], ['jekyll-rebuild']);
+  gulp.watch(['src/**/*.*'], ['jekyll-rebuild']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
