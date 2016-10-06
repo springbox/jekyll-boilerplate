@@ -9,10 +9,12 @@ jekyll-gulp-sass-browser-sync
 ## Setup
 
 1. Follow these steps to [setup your new repository with the bolierplate](https://help.github.com/articles/duplicating-a-repository/)
-2. nvm use
-3. rbenv local
-4. npm install -g gulp && npm install
-5. bundle install
+2. git clone git@github.com:springbox/new-repo.git
+3. cd new-repo
+4. nvm use
+5. rbenv local
+6. npm install -g gulp && npm install
+7. bundle install
 
 ## Usage
 
