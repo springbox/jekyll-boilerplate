@@ -9,9 +9,9 @@
 title: Rename Me
 email: re@name.me
 description: > # this means to ignore newlines until "baseurl:"
-  Springbox is a digital agency with offices in Austin and Los Angeles. We help our partners reach their goals with expert research, strategy and execution.
+  Add a description
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://*.springbox.com" # the base hostname & protocol for your site
+url: "https://*.rename.me" # the base hostname & protocol for your site
 
 # Build settings
 markdown: redcarpet
