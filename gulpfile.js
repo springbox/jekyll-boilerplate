@@ -1,8 +1,10 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
+var sassLint    = require('gulp-sass-lint');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
+
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -29,12 +31,22 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 
 gulp.task('sass', function () {
   return gulp.src('_scss/main.scss')
-    .pipe(sass({ includePaths: ['scss']}).on('error', sass.logError))
+    .pipe(sass({ includePaths: ['scss'], outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
     .pipe(gulp.dest('_site/css'))
     .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest('src/css'));
 });
+
+gulp.task('sasslint', function () {
+  return gulp.src('_scss/*.scss')
+    .pipe(sassLint({
+      config: '.sass-lint.yml'
+    }))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
+});
+
 
 gulp.task('watch', function () {
   gulp.watch('_scss/**/*.scss', ['sass']);

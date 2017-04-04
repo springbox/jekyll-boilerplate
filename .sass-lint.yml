@@ -1,0 +1,16 @@
+options:
+  config-file: ./node_modules/gulp-sass-lint/tests/.sass-lint.yml
+  merge-default-rules: true
+files:
+  include: '_scss/*.scss'
+rules:
+  nesting-depth:
+    - 1
+    - max-depth: 6
+  property-units:
+    - 0
+  no-misspelled-properties:
+      - 1
+      -
+        'extra-properties':
+          - 'overflow-scrolling'
