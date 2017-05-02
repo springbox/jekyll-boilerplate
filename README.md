@@ -8,7 +8,7 @@ jekyll-gulp-sass-browser-sync
 
 ## Setup
 
-1. Follow these steps to [setup your new repository with the bolierplate](https://help.github.com/articles/duplicating-a-repository/)
+1. Follow these steps to [setup your new repository with the boilerplate](https://help.github.com/articles/duplicating-a-repository/)
 2. git clone git@github.com:springbox/new-repo.git
 3. cd new-repo
 4. nvm use
