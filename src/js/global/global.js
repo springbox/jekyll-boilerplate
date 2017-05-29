@@ -1,0 +1,1 @@
+console.log('im your global javascript (every page)')
